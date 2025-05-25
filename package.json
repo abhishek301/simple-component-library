@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A Simple React component library built with TypeScript, Tailwind CSS, and Storybook",
   "main": "dist/index.js",
+  "type": "module",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "style": "dist/styles.css",
