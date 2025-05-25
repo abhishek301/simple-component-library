@@ -6,7 +6,6 @@
   "type": "module",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "style": "dist/styles.css",
   "files": [
     "dist"
   ],
