@@ -14,7 +14,7 @@ export default {
       },
     }],
   },
-  // setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'], // Optional for component libraries
+  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'], // Optional for component libraries
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.(ts|tsx)',
     '<rootDir>/src/**/*.(test|spec).(ts|tsx)'

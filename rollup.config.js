@@ -4,6 +4,7 @@ import typescript from '@rollup/plugin-typescript';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 const packageJson = JSON.parse(
   await import('fs').then(fs => 
@@ -26,8 +27,9 @@ export default [
         sourcemap: true,
       },
     ],
+    external: ['react', 'react-dom'], // Ensure these aren't bundled
     plugins: [
-      peerDepsExternal(),
+      peerDepsExternal(), // helpful for common deps
       resolve(),
       commonjs(),
       typescript({
@@ -44,6 +46,7 @@ export default [
           insertAt: 'top',
         },
       }),
+       visualizer({ filename: 'bundle-stats.html', open: true }),
     ],
   },
   {
