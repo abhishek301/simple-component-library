@@ -28,7 +28,7 @@ describe("Button", () => {
 
     // Check if the button has the expected classes for secondary variant
     expect(button).toHaveClass(
-      "font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 bg-secondary-500 hover:bg-secondary-600 text-white px-4 py-2 text-base cursor-pointer"
+      "font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 bg-muted hover:bg-dark text-white px-4 py-2 text-base cursor-pointer"
     );
   });
 

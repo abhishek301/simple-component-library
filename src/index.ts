@@ -1,5 +1,7 @@
-import './index.css';
+import "./index.css";
 
-export { Button } from './components/atoms/Button';
+export { Button } from "./components/atoms/Button";
 
-export type { ButtonProps } from './components/atoms/Button';
+export type { ButtonProps } from "./components/atoms/Button";
+
+export { Icon } from "./components/atoms/Icon";

@@ -58,3 +58,6 @@ temp/
 
 # TypeScript cache
 *.tsbuildinfo
+
+# bundle stats
+bundle-stats.html
