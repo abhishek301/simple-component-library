@@ -5,7 +5,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 import { visualizer } from 'rollup-plugin-visualizer';
-import url from '@rollup/plugin-url';
+import copy from 'rollup-plugin-copy';
 
 const packageJson = JSON.parse(
   await import('fs').then(fs => 
@@ -33,10 +33,13 @@ export default [
       peerDepsExternal(), // helpful for common deps
       resolve(),
       commonjs(),
-      url({
-        include: ['**/*.woff', '**/*.woff2', '**/*.ttf', '**/*.otf'],
-        limit: 0, // Always emit files, don't inline
-        fileName: 'fonts/[name][extname]',
+      copy({
+        targets: [
+          { 
+            src: 'src/assets/fonts/**/*', 
+            dest: 'dist/assets/fonts'
+          }
+        ]
       }),
       typescript({
         tsconfig: './tsconfig.json',
