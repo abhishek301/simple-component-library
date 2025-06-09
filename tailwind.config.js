@@ -17,6 +17,12 @@ module.exports = {
       'gray-light': '#c8c8c8',
       'gray-mid': '#d3d3d3',
       },
+      fontFamily: {
+        // Set Inter as default sans font with system fallbacks
+        'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        // Also provide it as explicit option
+        'inter': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],
