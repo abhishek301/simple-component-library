@@ -1,4 +1,4 @@
-# 🧩 Simple Component Library
+# 🧩 Simple Library
 
 A modular and flexible **React component library** built with **TypeScript**, **Tailwind CSS**, and **Storybook**. Designed for reuse, customization, and scalability across React projects.
 
@@ -19,9 +19,9 @@ A modular and flexible **React component library** built with **TypeScript**, **
 First, install the library (once published to npm):
 
 ```bash
-npm install simple-component-library
+npm install @simple-library/react
 # or
-yarn add simple-component-library
+yarn add @simple-library/react
 ```
 
 Since this library uses `react` and `react-dom` as `peerDependencies`, you must have them installed in your project:
@@ -35,7 +35,7 @@ npm install react react-dom
 ## 🚀 Usage
 
 ```tsx
-import { Button, Icon } from 'simple-component-library';
+import { Button, Icon } from '@simple-library/react';
 import { User } from 'react-feather';
 
 function App() {
