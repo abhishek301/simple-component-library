@@ -1,6 +1,6 @@
 {
   "name": "simple-component-library",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A Simple React component library built with TypeScript, Tailwind CSS, and Storybook",
   "main": "dist/index.js",
   "type": "module",
@@ -22,7 +22,8 @@
     "lint:fix": "eslint src --fix",
     "type-check": "tsc --noEmit",
     "prepare": "husky install",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "react",
@@ -33,6 +34,30 @@
   ],
   "author": "Abhishek choudhary",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhishek301/simple-component-library.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": ["package.json", "CHANGELOG.md"],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -44,6 +69,12 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
     "@storybook/addon-essentials": "^7.6.3",
     "@storybook/addon-interactions": "^7.6.3",
     "@storybook/addon-links": "^7.6.3",
@@ -78,6 +109,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-visualizer": "^6.0.3",
+    "semantic-release": "^22.0.12",
     "storybook": "^7.6.3",
     "tailwindcss": "^3.3.6",
     "ts-jest": "^29.1.1",
