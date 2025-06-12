@@ -1,6 +1,6 @@
 {
   "name": "simple-component-library",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A Simple React component library built with TypeScript, Tailwind CSS, and Storybook",
   "main": "dist/index.js",
   "type": "module",
@@ -42,7 +42,9 @@
     "access": "public"
   },
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -52,7 +54,10 @@
       [
         "@semantic-release/git",
         {
-          "assets": ["package.json", "CHANGELOG.md"],
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
       ]
