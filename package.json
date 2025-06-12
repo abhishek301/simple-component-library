@@ -36,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/abhishek301/simple-component-library.git"
+    "url": "https://github.com/abhishek301/simple-library-react.git"
   },
   "publishConfig": {
     "access": "public"
