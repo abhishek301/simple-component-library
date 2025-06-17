@@ -38,6 +38,12 @@ export default [
           { 
             src: 'src/assets/fonts/**/*', 
             dest: 'dist/assets/fonts'
+          },
+          // Export Tailwind preset for consumers
+          {
+            src: 'tailwind.config.js',
+            dest: 'dist',
+            rename: 'tailwind-preset.js'
           }
         ]
       }),
