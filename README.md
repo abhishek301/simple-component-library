@@ -131,6 +131,46 @@ npm run build-storybook
 
 ---
 
+## 💄Theme & Customization Options
+
+1. **Add our Tailwind preset to your config:**
+
+```js
+// tailwind.config.js
+const { designSystemPreset } = require('@simple-library/react');
+
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  presets: [designSystemPreset],
+  // Override any values in theme.extend
+};
+```
+
+2. **Customization Examples: Override typography**
+
+```js
+theme: {
+  extend: {
+    fontSize: {
+      'heading-1': ['100px', { lineHeight: '1.0' }] // Make it huge!
+    }
+  }
+}
+```
+
+### ✨ Benefits of This Approach:
+
+1. **Zero runtime overhead** - Pure Tailwind classes
+2. **Full customization** - Users can override any value
+3. **Type safety** - TypeScript support for your custom classes
+4. **Tree shaking** - Only used styles are included
+5. **Standard Tailwind workflow** - Familiar to developers
+6. **Gradual adoption** - Users can override piece by piece
+
+This gives you the best of both worlds: a cohesive design system that users can easily customize while staying within the Tailwind ecosystem!
+
+<br>
+
 ## 📄 License
 
 MIT © [Abhishek Choudhary](https://github.com/abhishek301)
