@@ -1,6 +1,6 @@
 {
   "name": "@simple-library/react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Simple React component library built with TypeScript, Tailwind CSS, and Storybook",
   "main": "dist/index.js",
   "type": "module",

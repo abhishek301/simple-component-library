@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/abhishek301/simple-library-react/compare/v1.0.0...v1.1.0) (2025-06-17)
+
+
+### Features
+
+* exported tailwindcss config for user customization ([feac87a](https://github.com/abhishek301/simple-library-react/commit/feac87a60068729f46f715665ca05a60f069f83b))
+
 # 1.0.0 (2025-06-12)
 
 
