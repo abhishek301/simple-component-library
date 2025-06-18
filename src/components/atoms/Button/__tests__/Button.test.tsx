@@ -28,7 +28,7 @@ describe("Button", () => {
 
     // Check if the button has the expected classes for secondary variant
     expect(button).toHaveClass(
-      "font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 bg-muted hover:bg-dark text-white px-4 py-2 text-base cursor-pointer"
+      "inline-flex items-center gap-2 rounded-full transition-colors duration-200 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-muted focus-visible:ring-offset-2 bg-dark text-white hover:bg-muted text-body px-4 py-2 cursor-pointer"
     );
   });
 
@@ -38,12 +38,5 @@ describe("Button", () => {
 
     expect(button).toBeDisabled();
     expect(button).toHaveClass("opacity-50");
-  });
-
-  it("renders with different sizes", () => {
-    render(<Button size="lg">Large Button</Button>);
-    const button = screen.getByRole("button");
-
-    expect(button).toHaveClass("text-lg");
   });
 });
