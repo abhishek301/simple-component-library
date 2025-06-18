@@ -7,6 +7,7 @@ type ClassValue =
   | boolean
   | undefined
   | ClassValue[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   | { [key: string]: any };
 
 export function combineClassNames(...args: ClassValue[]): string {
