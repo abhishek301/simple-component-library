@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/abhishek301/simple-library-react/compare/v1.1.0...v1.2.0) (2025-06-18)
+
+
+### Bug Fixes
+
+* eslint issue ([62c57a8](https://github.com/abhishek301/simple-library-react/commit/62c57a81810aac39a392b3834e8d398b7a9dbc09))
+
+
+### Features
+
+* added link, search, select and textarea also modify the button component ([655f477](https://github.com/abhishek301/simple-library-react/commit/655f477c64c73fb5fbb90c31a9c7d9e6a9aefef7))
+
 # [1.1.0](https://github.com/abhishek301/simple-library-react/compare/v1.0.0...v1.1.0) (2025-06-17)
 
 
