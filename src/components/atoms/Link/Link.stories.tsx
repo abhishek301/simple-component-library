@@ -1,6 +1,6 @@
 // components/atoms/Link.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react";
-import { Link } from "./Link";
+import { Link } from ".";
 import { Icon } from "../Icon";
 import { Link2 } from "react-feather";
 

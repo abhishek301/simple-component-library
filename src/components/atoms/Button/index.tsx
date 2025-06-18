@@ -2,6 +2,7 @@
 import React from "react";
 import { combineClassNames } from "../../../utils/combineClassNames";
 import { ButtonProps, ButtonVariant, ButtonSize } from "./types";
+import { Icon } from "../Icon";
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: "bg-primary text-white hover:bg-white hover:text-primary",
@@ -42,9 +43,9 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={finalClassName} disabled={isDisabled} {...props}>
-      {iconLeft && <span className="inline-flex">{iconLeft}</span>}
+      {iconLeft && <Icon icon={iconLeft} size={16} />}
       <span>{children}</span>
-      {iconRight && <span className="inline-flex">{iconRight}</span>}
+      {iconRight && <Icon icon={iconRight} size={16} />}
     </button>
   );
 };

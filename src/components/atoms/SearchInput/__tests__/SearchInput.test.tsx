@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { SearchInput } from "../SearchInput";
+import { SearchInput } from "..";
 import { Search } from "react-feather";
 
 describe("SearchInput", () => {

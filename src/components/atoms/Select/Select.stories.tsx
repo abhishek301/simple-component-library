@@ -1,4 +1,4 @@
-import { Select } from "./Select";
+import { Select } from ".";
 import { SelectOption } from "./types";
 import {
   Hexagon,

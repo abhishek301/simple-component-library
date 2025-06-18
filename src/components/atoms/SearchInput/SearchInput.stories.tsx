@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { SearchInput } from "./SearchInput";
+import { SearchInput } from ".";
 import { Search } from "react-feather";
 
 const meta: Meta<typeof SearchInput> = {
