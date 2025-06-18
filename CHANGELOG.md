@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/abhishek301/simple-library-react/compare/v1.2.0...v1.2.1) (2025-06-18)
+
+
+### Bug Fixes
+
+* icon support inside button and name change some of files ([9791427](https://github.com/abhishek301/simple-library-react/commit/9791427f074bff3117a3c13b62e837bcf08523f8))
+
 # [1.2.0](https://github.com/abhishek301/simple-library-react/compare/v1.1.0...v1.2.0) (2025-06-18)
 
 
