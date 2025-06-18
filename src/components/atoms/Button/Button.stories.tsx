@@ -13,31 +13,31 @@ export default {
 export const Primary = () => <Button variant="primary">submit</Button>;
 
 export const Secondary = () => (
-  <Button variant="secondary" iconLeft={<Bookmark size={16} />}>
+  <Button variant="secondary" iconLeft={Bookmark}>
     chip
   </Button>
 );
 
 export const White = () => (
-  <Button variant="white" iconLeft={<ArrowLeft size={16} />}>
+  <Button variant="white" iconLeft={ArrowLeft}>
     back
   </Button>
 );
 
 export const Inverted = () => (
-  <Button variant="inverted" iconLeft={<Bookmark size={16} />}>
+  <Button variant="inverted" iconLeft={Bookmark}>
     chip
   </Button>
 );
 
 export const Muted = () => (
-  <Button variant="muted" iconLeft={<Bookmark size={16} />} disabled>
+  <Button variant="muted" iconLeft={Bookmark} disabled>
     chip
   </Button>
 );
 
 export const WithRightIcon = () => (
-  <Button variant="primary" iconRight={<Bookmark size={16} />}>
+  <Button variant="primary" iconRight={Bookmark}>
     Save
   </Button>
 );

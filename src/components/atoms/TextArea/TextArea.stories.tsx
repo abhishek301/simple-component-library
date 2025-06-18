@@ -1,7 +1,7 @@
 // components/atoms/TextArea.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { TextArea } from "./TextArea";
+import { TextArea } from ".";
 import { Button } from "../Button";
 
 const meta = {

@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { Link } from "../Link";
+import { Link } from "..";
 
 describe("Link component", () => {
   it("renders the link with default props", () => {

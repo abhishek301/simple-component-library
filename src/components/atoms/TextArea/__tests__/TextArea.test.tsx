@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { TextArea } from "../TextArea";
+import { TextArea } from "..";
 
 describe("TextArea", () => {
   it("renders with default placeholder", () => {

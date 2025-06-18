@@ -1,3 +1,5 @@
+import { Icon } from "../Icon/types";
+
 export type ButtonVariant =
   | "primary"
   | "secondary"
@@ -12,7 +14,7 @@ export interface ButtonProps
   variant?: ButtonVariant;
   size?: ButtonSize;
   customSize?: string;
-  iconLeft?: React.ReactNode;
-  iconRight?: React.ReactNode;
+  iconLeft?: Icon;
+  iconRight?: Icon;
   className?: string;
 }

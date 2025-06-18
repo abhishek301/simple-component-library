@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Select } from "../Select";
+import { Select } from "..";
 import { SelectOption } from "../types";
 import { Hexagon } from "react-feather";
 
