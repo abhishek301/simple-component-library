@@ -1,53 +1,50 @@
+// src/components/ui/Button.tsx
 import React from "react";
+import { combineClassNames } from "../../../utils/combineClassNames";
+import { ButtonProps, ButtonVariant, ButtonSize } from "./types";
 
-export interface ButtonProps {
-  /** Button content */
-  children: React.ReactNode;
-  /** Button variant */
-  variant?: "primary" | "secondary" | "outline";
-  /** Button size */
-  size?: "sm" | "md" | "lg";
-  /** Disabled state */
-  disabled?: boolean;
-  /** Click handler */
-  onClick?: () => void;
-  /** Additional CSS classes */
-  className?: string;
-}
-
-const variantClasses = {
-  primary: "bg-primary hover:bg-white hover:text-primary text-white",
-  secondary: "bg-muted hover:bg-dark text-white",
-  outline:
-    "border-2 border-primary text-primary hover:text-white hover:bg-primary",
+const variantClasses: Record<ButtonVariant, string> = {
+  primary: "bg-primary text-white hover:bg-white hover:text-primary",
+  secondary: "bg-dark text-white hover:bg-muted",
+  white: "bg-white text-dark hover:bg-gray-mid",
+  inverted: "bg-gray-mid text-dark hover:bg-dark hover:text-white",
+  muted: "bg-gray-mid text-muted cursor-not-allowed",
 };
 
-const sizeClasses = {
-  sm: "px-3 py-1.5 text-sm",
-  md: "px-4 py-2 text-base",
-  lg: "px-6 py-3 text-lg",
+const sizeClasses: Record<ButtonSize, string> = {
+  sm: "text-subbody px-3 py-1.5",
+  md: "text-body px-4 py-2",
 };
 
 export const Button: React.FC<ButtonProps> = ({
   children,
   variant = "primary",
   size = "md",
-  disabled = false,
-  onClick,
+  customSize,
+  iconLeft,
+  iconRight,
+  disabled,
   className = "",
+  ...props
 }) => {
-  const baseClasses =
-    "font-medium rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2";
-  const disabledClasses = disabled
-    ? "opacity-50 cursor-not-allowed"
-    : "cursor-pointer";
+  const isDisabled = disabled || variant === "muted";
 
-  const classes =
-    `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`.trim();
+  const baseClasses =
+    "inline-flex items-center gap-2 rounded-full transition-colors duration-200 font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-muted focus-visible:ring-offset-2";
+
+  const finalClassName = combineClassNames(
+    baseClasses,
+    variantClasses[variant],
+    customSize || sizeClasses[size],
+    isDisabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
+    className
+  );
 
   return (
-    <button className={classes} onClick={onClick} disabled={disabled}>
-      {children}
+    <button className={finalClassName} disabled={isDisabled} {...props}>
+      {iconLeft && <span className="inline-flex">{iconLeft}</span>}
+      <span>{children}</span>
+      {iconRight && <span className="inline-flex">{iconRight}</span>}
     </button>
   );
 };

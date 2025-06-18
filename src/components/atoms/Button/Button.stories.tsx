@@ -1,69 +1,43 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './index';
+import { Button } from ".";
+import { Bookmark, ArrowLeft } from "react-feather"; // Use any icon library
 
-const meta: Meta<typeof Button> = {
-  title: 'Atoms/Button',
-  component: Button,
+export default {
+  title: "Atoms/Button",
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
-  argTypes: {
-    variant: {
-      control: { type: 'select' },
-      options: ['primary', 'secondary', 'outline'],
-    },
-    size: {
-      control: { type: 'select' },
-      options: ['sm', 'md', 'lg'],
-    },
-    disabled: {
-      control: 'boolean',
-    },
-  },
+  tags: ["autodocs"],
+  component: Button,
 };
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export const Primary = () => <Button variant="primary">submit</Button>;
 
-export const Primary: Story = {
-  args: {
-    children: 'Button',
-    variant: 'primary',
-  },
-};
+export const Secondary = () => (
+  <Button variant="secondary" iconLeft={<Bookmark size={16} />}>
+    chip
+  </Button>
+);
 
-export const Secondary: Story = {
-  args: {
-    children: 'Button',
-    variant: 'secondary',
-  },
-};
+export const White = () => (
+  <Button variant="white" iconLeft={<ArrowLeft size={16} />}>
+    back
+  </Button>
+);
 
-export const Outline: Story = {
-  args: {
-    children: 'Button',
-    variant: 'outline',
-  },
-};
+export const Inverted = () => (
+  <Button variant="inverted" iconLeft={<Bookmark size={16} />}>
+    chip
+  </Button>
+);
 
-export const Small: Story = {
-  args: {
-    children: 'Small Button',
-    size: 'sm',
-  },
-};
+export const Muted = () => (
+  <Button variant="muted" iconLeft={<Bookmark size={16} />} disabled>
+    chip
+  </Button>
+);
 
-export const Large: Story = {
-  args: {
-    children: 'Large Button',
-    size: 'lg',
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    children: 'Disabled Button',
-    disabled: true,
-  },
-};
+export const WithRightIcon = () => (
+  <Button variant="primary" iconRight={<Bookmark size={16} />}>
+    Save
+  </Button>
+);
